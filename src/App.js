@@ -1,26 +1,48 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Form from './components/Form';
+import List from './components/List';
 
 class App extends Component {
+
+  state = {
+    list: ["sdsdsd"]
+  }
+
+  addToList = (e) => {
+    e.preventDefault();
+    const item = e.target.elements.addItem.value;
+    const copy = this.state.list;
+    const update = copy.push(item);
+    this.setState({
+      state: update
+    })
+    console.log(this.state);
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              1 of 3
+            </div>
+            <div className="col-7">
+
+                <Form addToList={this.addToList} />
+
+
+                <List list={this.state.list} />
+
+            </div>
+            <div className="col">
+              3 of 3
+            </div>
+          </div>
+        </div>
+      
     );
   }
 }
