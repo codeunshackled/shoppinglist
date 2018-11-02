@@ -1,3 +1,12 @@
+A yet basic shopping list.  Will periodically add features.
+
+## React Features/Built-In Methods used
+localStorage
+componentDidUpdate
+componentDidMount
+stateless functional components
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
