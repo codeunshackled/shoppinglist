@@ -30,3 +30,13 @@
     transform: rotate(360deg);
   }
 }
+
+.badge-pill {
+  padding: 0.5rem;
+  font-size: 14px;
+}
+
+.small-button {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
